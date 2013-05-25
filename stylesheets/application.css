@@ -1,0 +1,844 @@
+/**
+ * Redpenny stylesheet
+ *
+ * Author: Jarod Denison (@jaroslavius)
+ * @2013-05-25
+ *
+ */
+
+
+@import "http://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Code+Pro";
+@import "../../../stylesheets/application.css";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font/fontawesome-webfont.eot?v=3.1.0');
+  src: url('font/fontawesome-webfont.eot?#iefix&v=3.1.0') format('embedded-opentype'), url('font/fontawesome-webfont.woff?v=3.1.0') format('woff'), url('font/fontawesome-webfont.ttf?v=3.1.0') format('truetype'), url('font/fontawesome-webfont.svg#fontawesomeregular?v=3.1.0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body
+{
+	padding-top:90px;
+	background-image:url(images/bg/bg.gif);
+	background-repeat:repeat-x;
+	background-position:center top
+}
+
+body,#wrapper
+{
+	background-color:#eee;
+	font-family:Helvetica,Arial,"Lucida Grande",verdana,sans-serif
+}
+
+a
+{
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-o-transition:all .2s linear;
+	-webkit-transition:all .2s linear
+}
+
+.action-settings #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f013";
+	padding-right: 5px;
+}
+
+.controller-projects.action-show #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f132";
+	padding-right: 5px;
+}
+
+.controller-activities #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f135";
+	padding-right: 5px;
+}
+
+.controller-versions #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f018";
+	padding-right: 5px;
+}
+
+.controller-issues #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f145";
+	padding-right: 5px;
+}
+
+.controller-calendars #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f073";
+	padding-right: 5px;
+}
+
+.controller-news #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f06c";
+	padding-right: 5px;
+}
+
+.controller-documents #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f02d";
+	padding-right: 5px;
+}
+
+.controller-wiki #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f14b";
+	padding-right: 5px;
+}
+
+.controller-files #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f0b1";
+	padding-right: 5px;
+}
+
+.controller-repositories #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f074";
+	padding-right: 5px;
+}
+
+.controller-gantts #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f080";
+	padding-right: 5px;
+}
+
+.controller-admin #header,.controller-users #header,.controller-groups #header,.controller-roles #header,.controller-trackers #header,.controller-issue_statuses #header,.controller-workflows #header,.controller-custom_fields #header,.controller-users #header,.controller-enumerations #header,.controller-settings #header,.controller-auth_sources #header,.controller-plugins #header,.controller-info #header,.controller-projects.action-index #header,.controller-welcome #header,.controller-my #header,.controller-account.action-login #header
+{
+	height:3.1em
+}
+
+.controller-account.action-login #content
+{
+	background-color:#fafafa!important
+}
+.controller-welcome #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f015 ";	
+	padding-right: 5px;
+	font-weight: 100;
+}
+.controller-users #header h1:before
+{
+	font-family: Fontawesome;
+	content: "\f0f0 ";
+	padding-right: 5px;
+}
+
+.splitcontentright .projects.box ul
+{
+	padding-left:20px
+}
+
+.splitcontentright .projects.box li
+{
+	margin-bottom: 10px;
+	list-style:none
+}
+.splitcontentleft .news.box p a:first-child,
+.splitcontentright .news.box p a:first-child,
+
+.splitcontentleft .projects.box li a:link,
+.splitcontentright .projects.box li a:link
+{
+	font-size: 11px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	background-color:#eee;
+	padding:4px 10px
+}
+
+a:hover
+{
+	text-decoration:underline
+}
+
+a:hover,a:active
+{
+	color:#2A5685
+}
+
+.action-index .wiki
+{
+	width:90%;
+	color:#909090;
+	display:block
+}
+
+.action-index h4 a
+{
+	font-size:110%;
+	border-bottom:#ededed 1px dashed;
+	display:block;
+	padding-bottom:5px
+}
+
+.action-index h3
+{
+	background-color:#efefef;
+	padding:10px
+}
+
+.action-index p
+{
+	margin-top:0;
+	padding-top:0
+}
+
+ul.projects.root
+{
+	-webkit-column-count:4;
+	-moz-column-count:4;
+	-ms-column-count:4;
+	-o-column-count:4;
+	column-count:4
+}
+
+ul.projects li.root
+{
+	padding:5%;
+	background-color:#eee;
+	margin:0 0 10px;
+	display:inline-block;
+	width:90%;
+	vertical-align:top;
+	border-bottom:2px #DDD solid;
+	border-left:1px dotted #E0E0E0
+}
+
+#header,#top-menu
+{
+	margin:0
+}
+
+#header
+{
+	background-color: #1b1b1b;
+	background-image: -moz-linear-gradient(top,#222,#111);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#222),to(#111));
+	background-image: -webkit-linear-gradient(top,#222,#111);
+	background-image: -o-linear-gradient(top,#222,#111);
+	background-image: linear-gradient(to bottom,#222,#111);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222',endColorstr='#ff111111',GradientType=0);
+	border-color: #252525;
+	padding:8px 8px 0
+}
+
+#header h1
+{
+	margin:0 24px
+}
+
+#header #quick-search
+{
+	margin:3px 24px 0
+}
+
+#top-menu
+{
+	background-color:#000;
+	font-size:10px;
+	position:relative;
+	padding:0;
+	height:21px;
+	padding-top:0
+}
+
+#top-menu ul
+{
+	padding:0 21px
+}
+
+#top-menu li,#top-menu #loggedas
+{
+	color:#ddd;
+	line-height:21px;
+	margin-right:4px
+}
+
+#top-menu li a
+{
+	color:#999;
+	font-weight:600;
+	padding:4px 5px
+}
+
+#top-menu li a:hover
+{
+	color:#fff;
+	text-decoration:none
+}
+
+#main
+{
+	background:#EEE;
+	margin:8px 24px 0
+}
+
+#content,#main.nosidebar #content
+{
+	background:#fff;
+	border-right:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+	overflow:auto;
+	-moz-box-shadow:#bbb 1px 1px 2px;
+	-webkit-box-shadow:2px 2px 0px -2px #bbb;
+	border-left:1px #ddd solid
+}
+
+#content
+{
+	width:70%
+}
+
+#content .wiki img
+{
+	max-width:98%
+}
+
+#main.nosidebar #content
+{
+	width:auto
+}
+
+#sidebar
+{
+	width:26%;
+	background:url(images/logo.png) no-repeat center top;
+	padding-top:80px
+}
+
+#sidebar a,#sidebar a.selected
+{
+	display:inline-block;
+	padding:4px 4px 4px 21px !important;
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-o-transition:all .2s linear;
+	-webkit-transition:all .2s linear;
+	background:url(images/bullet.png) 2px 3px no-repeat
+}
+
+#sidebar a.selected
+{
+	padding-top:2px;
+	padding-bottom:2px;
+	background-position:2px 5px;
+	margin:auto;
+	color:#a0a0a0;
+	font-weight:600
+}
+
+#footer
+{
+	background-color:#EEE;
+	border:0;
+	clear:left;
+	color:#666;
+	font-size:9px;
+	margin:4px 20px 20px;
+	padding-bottom:15px;
+	text-align:left
+}
+
+#footer a:hover
+{
+	background:#666 none repeat scroll 0 0;
+	color:#FFF!important
+}
+
+#footer a:link,#footer a:visited
+{
+	color:#666
+}
+
+#footer .bgr:after
+{
+	content:' Theme by Jared Denison (themondays)';
+	float:right
+}
+
+h1,h2,h3,h4
+{
+	font-family:"PT Sans","Lucida Grande",arial,sans-serif
+}
+
+h1
+{
+	font-size:24px;
+	font-weight:400;
+	margin:0 0 0 .25em;
+	padding:0 0 10px;
+	text-align:left
+}
+
+h2,h3,h4,.wiki h1,.wiki h2,.wiki h3
+{
+	border-bottom:0
+}
+
+h2,.wiki h1
+{
+	background-color:#e0e0e0;
+	margin:-6px -10px 10px;
+	padding:10px 20px;
+	font-size:14px;
+	color:#000;
+	border-top:1px #ddd solid
+}
+
+.wiki h1
+{
+	font-family:"PT Sans","Trebuchet MS",Helvetica,sans-serif;
+	font-weight:700
+}
+
+.wiki h2
+{
+	background-color:transparent
+}
+
+div.issue div.wiki h3
+{
+	text-decoration:underline
+}
+
+h3,h4
+{
+	font-weight:400
+}
+
+div.wiki h3,div.wiki h4
+{
+	font-weight:700
+}
+
+#sidebar h3
+{
+	border-bottom:1px solid #DCDCDC;
+	padding:6px 8px
+}
+
+div.journal h4
+{
+	background-color:#EDF3FE;
+	border-left:3px solid #9FBFFA;
+	padding:10px
+}
+
+div.splitcontentleft h2
+{
+	background-color:transparent;
+	padding:0;
+	margin:20px 0 5px
+}
+
+#sidebar a:hover
+{
+	background-color:#039;
+	color:#FFF;
+	text-decoration:none
+}
+
+#main-menu
+{
+	margin:0 24px
+}
+
+#main-menu li a
+{
+	font-family: "PT Sans", Helvetica, Arial;
+	transition:all .4s linear;
+	-moz-transition:all .4s linear;
+	-o-transition:all .4s linear;
+	-webkit-transition:all .4s linear;
+	background-color:#666;
+	font-weight:400;
+	padding:4px 8px 4px
+}
+
+#main-menu li a:hover
+{
+	background:#999;
+	text-decoration:none
+}
+
+#main-menu li a.selected,#main-menu li a.selected:hover
+{
+	background-color:#EEE;
+	color:#111;
+	font-weight:700
+}
+#top-menu li a.home:before {
+	font-family: Fontawesome;
+	content: "\f015 ";	
+}
+#top-menu li a.my-page:before {
+	font-family: Fontawesome;
+	content: "\f0c9 ";	
+}
+
+#top-menu li a.projects:before {
+	font-family: Fontawesome;
+	content: "\f0c2 ";	
+}
+
+#top-menu li a.administration:before {
+	font-family: Fontawesome;
+	content: "\f11b ";	
+}
+
+#top-menu li a.help:before {
+	font-family: Fontawesome;
+	content: "\f0e9 ";	
+}
+
+#top-menu #account a.my-account:before {
+	font-family: Fontawesome;
+	content: "\f0f0 ";
+}
+#top-menu #account a.logout:before {
+	font-family: Fontawesome;
+	content: "\f08b ";
+}
+
+table.list
+{
+	border:none
+}
+
+table.list th
+{
+	background-color:#fff
+}
+
+table.list tbody td,table.list tbody tr td,table.list tbody tr td.checkbox
+{
+	border-bottom:solid 1px #ddd;
+	font-size:11px;
+	padding:4px 10px 4px 3px
+}
+
+table.list thead th
+{
+	border:none;
+	border-bottom:1px solid #999;
+	font-size:9px;
+	font-weight:400;
+	padding:0 3px 3px;
+	text-transform:uppercase
+}
+
+table.list thead th a
+{
+	color:#000
+}
+
+table.list thead th a:hover
+{
+	color:#000
+}
+
+table.list tr.issue a
+{
+	color:#333
+}
+
+tr.odd.priority-5,table.list tbody tr.odd.priority-5:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.odd.priority-5
+{
+	background:#ffc4c4
+}
+
+tr.even.priority-5,table.list tbody tr.even.priority-5:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.even.priority-5
+{
+	background:#ffd4d4
+}
+
+tr.priority-5 a,tr.priority-5:hover a
+{
+	color:#900
+}
+
+tr.odd.priority-5 td,tr.even.priority-5 td
+{
+	border-color:#ffb4b4
+}
+
+tr.odd.priority-4,table.list tbody tr.odd.priority-4:hover
+{
+	color:#900
+}
+
+tr.odd.priority-4
+{
+	background:#ffc4c4
+}
+
+tr.even.priority-4,table.list tbody tr.even.priority-4:hover
+{
+	color:#900
+}
+
+tr.even.priority-4
+{
+	background:#ffd4d4
+}
+
+tr.priority-4 a
+{
+	color:#900
+}
+
+tr.odd.priority-4 td,tr.even.priority-4 td
+{
+	border-color:#ffb4b4
+}
+
+tr.odd.priority-3,table.list tbody tr.odd.priority-3:hover
+{
+	color:#900
+}
+
+tr.odd.priority-3
+{
+	background:#fee
+}
+
+tr.even.priority-3,table.list tbody tr.even.priority-3:hover
+{
+	color:#900
+}
+
+tr.even.priority-3
+{
+	background:#fff2f2
+}
+
+tr.priority-3 a
+{
+	color:#900
+}
+
+tr.odd.priority-3 td,tr.even.priority-3 td
+{
+	border-color:#fcc
+}
+
+tr.odd.priority-1,table.list tbody tr.odd.priority-1:hover
+{
+	color:#559
+}
+
+tr.odd.priority-1
+{
+	background:#eaf7ff
+}
+
+tr.even.priority-1,table.list tbody tr.even.priority-1:hover
+{
+	color:#559
+}
+
+tr.even.priority-1
+{
+	background:#f2faff
+}
+
+tr.priority-1 a
+{
+	color:#559
+}
+
+tr.odd.priority-1 td,tr.even.priority-1 td
+{
+	border-color:#add7f3
+}
+
+p.breadcrumb
+{
+	background-color:#EEE;
+	border-bottom:1px solid #fff;
+	font-size:.9em;
+	margin:-6px -10px 6px;
+	padding:6px;
+	text-indent:15px
+}
+
+input[type="text"],input[type="password"],textarea,select
+{
+	padding:2px;
+	border:1px solid #d7d7d7
+}
+
+input[type="text"],input[type="password"]
+{
+	padding:3px
+}
+
+input[type="text"]:focus,input[type="password"]:focus,textarea:focus,select:focus
+{
+	border:1px solid #886
+}
+
+option
+{
+	border-bottom:1px dotted #d7d7d7
+}
+
+input#issue_subject
+{
+	font-size:200%;
+	width:90%
+}
+
+textarea.wiki-edit
+{
+	font-family:Cambria,Verdana,Serif;
+	font-size:larger
+}
+
+.box
+{
+	background-color:#fcfcfc
+}
+
+.contextual
+{
+	font-size:.9em;
+	font-family:verdana
+}
+
+hr
+{
+	background:#eee none repeat scroll 0 0
+}
+
+div.issue
+{
+	background:#FFFFEC
+}
+
+div.splitcontentleft ol li,div.splitcontentleft ul li,div.wiki ol li,div.wiki ul li
+{
+	padding:4px 0
+}
+
+div.wiki ul.toc li
+{
+	padding:0
+}
+
+ol li ol li
+{
+	list-style-type:lower-alpha
+}
+
+ol li ol li ol li
+{
+	list-style-type:lower-roman
+}
+
+#login-form table
+{
+	padding:25px 28px;
+	background:#fff;
+	text-align:left;
+	width:410px;
+	margin:10px auto;
+	font-family:lucida grande,verdana;
+	font-size:12px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow:0 0 6px #999;
+	-webkit-box-shadow:0 0 6px #999;
+	box-shadow:0 0 6px #999;
+	border:1px solid #AAA
+}
+
+#login-form input
+{
+	font-size:14px;
+	padding:3px;
+	margin-bottom:10px
+}
+
+#login-form #username,#login-form #password
+{
+	width:275px!important;
+	font-size:14px;
+	padding:3px;
+	margin-bottom:10px
+}
+
+input[type="submit"]
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:13px;
+	color:#050505;
+	padding:5px 10px;
+	background:-moz-linear-gradient(top,#fff 0%,#ebebeb 50%,#dbdbdb 50%,#b5b5b5);
+	background:-webkit-gradient(linear,left top,left bottom,from(#fff),color-stop(0.50,#ebebeb),color-stop(0.50,#dbdbdb),to(#b5b5b5));
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #949494;
+	-moz-box-shadow:0 1px 3px rgba(000,000,000,0.5),inset 0 0 2px rgba(255,255,255,1);
+	-webkit-box-shadow:0 1px 3px rgba(000,000,000,0.3),inset 0 0 2px rgba(255,255,255,1);
+	box-shadow:0 1px 3px rgba(000,000,000,0.2),inset 0 0 2px rgba(255,255,255,1);
+	text-shadow:0 -1px 0 rgba(000,000,000,0.2),0 1px 0 rgba(255,255,255,1);
+	cursor:pointer
+}
+
+html > body #content
+{
+	min-height:auto!important
+}
+
+pre,code,.line-code 
+{
+	font-family:'Source Code Pro'
+}
+.autoscroll table.filecontent th.line-num {
+	
+	padding-right: 7px;
+	font-family:'Source Code Pro', helvetica, Arial;
+}
