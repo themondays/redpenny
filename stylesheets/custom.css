@@ -1,0 +1,31 @@
+/**
+ * Redpenny custom user stylesheet
+ *
+ * Author: Jarod Denison (@jaroslavius)
+ * @2013-05-25
+ * @license http://creativecommons.org/licenses/by/3.0
+ *
+ */
+
+
+/**
+ * Sidebar Logotype
+ */
+body
+{
+	padding-top:90px;
+	background-image:url(images/bg/bg.gif);
+	background-repeat:repeat-x;
+	background-position:center top
+}
+
+
+/**
+ * Sidebar Logotype
+ */
+#sidebar
+{
+	width:26%;
+	background:url(images/logo.png) no-repeat center top;
+	padding-top:80px
+}
