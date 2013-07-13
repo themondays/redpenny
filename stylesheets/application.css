@@ -292,7 +292,9 @@ ul.projects li.root
 #main
 {
 	background:#EEE;
-	margin:8px 24px 0
+	margin:8px 24px 20px 0;
+	min-height: 320px;
+	clear: both;
 }
 
 #content,#main.nosidebar #content
@@ -346,14 +348,19 @@ ul.projects li.root
 {
 	background-color:#EEE;
 	border:0;
-	clear:left;
+	clear:both;
 	color:#666;
 	font-size:9px;
-	margin:4px 20px 20px;
-	padding-bottom:15px;
-	text-align:left
+	margin: 20px 0 4px 0;
+	text-align:left;
+	padding: 0;
 }
+#footer2:after {
+	content: '';
+	display: block;
+	padding-top: 86px;
 
+}
 #footer a:hover
 {
 	background:#666 none repeat scroll 0 0;
@@ -364,7 +371,10 @@ ul.projects li.root
 {
 	color:#666
 }
-
+#footer .bgl {
+	padding: 20px;
+	background-color: #1b1b1b;
+}
 #footer .bgr:after
 {
 	content:' Theme by Jared Denison (themondays)';
@@ -445,11 +455,15 @@ div.splitcontentleft h2
 	padding:0;
 	margin:20px 0 5px
 }
-
-#sidebar a:hover
+#sidebar li a {
+}
+#sidebar li:hover, #sidebar li:hover a {
+	color: #FFF;
+	text-decoration: none;
+}
+#sidebar li:hover
 {
 	background-color:#039;
-	color:#FFF;
 	text-decoration:none
 }
 
@@ -557,6 +571,119 @@ table.list tr.issue a
 	color:#333
 }
 
+/**
+ * Issues
+ */
+table.list.issues tr th, table.list.issues tr td {
+  text-align: left;
+}
+
+/**
+ * Trackers
+ */
+ /*
+ table.list.issues .issue.tracker-1 td.tracker:before {
+	 content: '\f188';
+	 font-weight: 300;
+	 font-family: FontAwesome;
+	 padding-right: 5px;
+ }
+
+ table.list.issues .issue.tracker-2 td.tracker:before {
+	 content: '\f0c3';
+	 font-weight: 300;
+	 font-family: FontAwesome;
+	 padding-right: 5px;
+ }
+
+ table.list.issues .issue.tracker-3 td.tracker:before {
+	 content: '\f059';
+	 font-weight: 300;
+	 font-family: FontAwesome;
+	 padding-right: 5px;
+ }
+
+ table.list.issues .issue.tracker-4 td.tracker:before {
+	 content: '\f121';
+	 font-weight: 300;
+	 font-family: FontAwesome;
+	 padding-right: 5px;
+ }
+ */
+ 
+/**
+ *  Priorities
+ */
+
+
+/* Priority #7 */
+tr.odd.priority-7,table.list tbody tr.odd.priority-7:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.odd.priority-7
+{
+	background:#FF6363;
+	font-weight:700
+}
+
+tr.even.priority-7,table.list tbody tr.even.priority-7:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.even.priority-7
+{
+	background:#FF8A8A
+}
+
+tr.priority-7 a,tr.priority-7:hover a
+{
+	color:#900
+}
+
+tr.odd.priority-7 td,tr.even.priority-7 td
+{
+	border-color:#ffb4b4
+}
+
+/* Priority #6 */
+tr.odd.priority-6,table.list tbody tr.odd.priority-6:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.odd.priority-6
+{
+	background:#ff9898
+}
+
+tr.even.priority-6,table.list tbody tr.even.priority-6:hover
+{
+	color:#900;
+	font-weight:700
+}
+
+tr.even.priority-6
+{
+	background:#ffacac
+}
+
+tr.priority-6 a,tr.priority-6:hover a
+{
+	color:#900
+}
+
+tr.odd.priority-6 td,tr.even.priority-6 td
+{
+	border-color:#ffb4b4
+}
+
+/* Priority #5 */
 tr.odd.priority-5,table.list tbody tr.odd.priority-5:hover
 {
 	color:#900;
@@ -589,6 +716,7 @@ tr.odd.priority-5 td,tr.even.priority-5 td
 	border-color:#ffb4b4
 }
 
+/* Priority #4 */
 tr.odd.priority-4,table.list tbody tr.odd.priority-4:hover
 {
 	color:#900
@@ -596,7 +724,7 @@ tr.odd.priority-4,table.list tbody tr.odd.priority-4:hover
 
 tr.odd.priority-4
 {
-	background:#ffc4c4
+	background:#ffd4d4
 }
 
 tr.even.priority-4,table.list tbody tr.even.priority-4:hover
@@ -606,7 +734,7 @@ tr.even.priority-4,table.list tbody tr.even.priority-4:hover
 
 tr.even.priority-4
 {
-	background:#ffd4d4
+	background:#ffe4e4
 }
 
 tr.priority-4 a
@@ -619,6 +747,7 @@ tr.odd.priority-4 td,tr.even.priority-4 td
 	border-color:#ffb4b4
 }
 
+/* Priority #3 */
 tr.odd.priority-3,table.list tbody tr.odd.priority-3:hover
 {
 	color:#900
@@ -636,7 +765,7 @@ tr.even.priority-3,table.list tbody tr.even.priority-3:hover
 
 tr.even.priority-3
 {
-	background:#fff2f2
+	background:#fff5f5
 }
 
 tr.priority-3 a
@@ -649,6 +778,7 @@ tr.odd.priority-3 td,tr.even.priority-3 td
 	border-color:#fcc
 }
 
+/* Priority #1 */
 tr.odd.priority-1,table.list tbody tr.odd.priority-1:hover
 {
 	color:#559
@@ -678,6 +808,40 @@ tr.odd.priority-1 td,tr.even.priority-1 td
 {
 	border-color:#add7f3
 }
+
+tr.odd.priority-default.issue.closed td,
+tr.even.priority-default.issue.closed td {
+	border-bottom-color: #e0e0e0;
+}
+
+tr.odd.priority-default.issue.closed,
+tr.even.priority-default.issue.closed,
+tr.odd.priority-default.issue.closed  a,
+tr.even.priority-default.issue.closed a,
+tr.odd.priority-default.issue.closed:hover,
+tr.even.priority-default.issue.closed:hover
+{
+	font-weight: 300;
+	color: #808080;
+	text-decoration: none;
+	border-bottom-color: #a0a0a0;
+}
+
+tr.odd.issue.closed {
+	background:#fee;
+	border-bottom-color: #a0a0a0;
+}
+
+tr.even.issue.closed {
+	background:#ffe;
+	border-bottom-color: #aaa;
+}
+
+tr.odd.issue.closed:hover, tr.even.issue.closed:hover {
+	background:#ffe;
+}
+
+
 
 p.breadcrumb
 {
@@ -820,7 +984,7 @@ html > body #content
 	min-height:auto!important
 }
 
-pre,code,.line-code 
+pre,code,.line-code, table.filecontent td.line-code pre 
 {
 	font-family:'Source Code Pro'
 }
@@ -828,4 +992,8 @@ pre,code,.line-code
 	
 	padding-right: 7px;
 	font-family:'Source Code Pro', helvetica, Arial;
+}
+.nodata, .action-index p.nodata {
+	padding: 20px 0;
+	border-width: 1px;
 }
